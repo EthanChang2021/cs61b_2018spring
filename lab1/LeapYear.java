@@ -14,6 +14,15 @@ public class LeapYear {
         }
     }
 
+    public static boolean isLeapYear(int year){
+        /** we will test whether the year can be divided by 4 or 400,and can not be divided by 100.*/
+        if((year % 4 == 0 || year % 400 == 0) && (year % 100 != 0)){        
+            return true;                                                    
+        }                                                                   
+        else
+            return false;
+    }    
+
     /** Must be provided an integer as a command line argument ARGS. */
     public static void main(String[] args) {
         if (args.length < 1) {
